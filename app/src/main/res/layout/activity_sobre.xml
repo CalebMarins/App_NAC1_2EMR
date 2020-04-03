@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/me_wlp"
+    android:layout_height="match_parent"
+    tools:context=".Sobre">
+
+  <!--Este é o gradiente em cima do background e toda a sua formatação-->
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/bgsobre"
+      android:scaleType="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0" />
+
+  <!--Essa é a minha foto em ícone e sua formatação-->
+  <ImageView
+      android:id="@+id/img_me"
+      android:layout_width="210dp"
+      android:layout_height="210dp"
+      android:layout_marginTop="70dp"
+      android:background="@drawable/me_icon"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints" />
+
+
+  <!--Esse é o Pnl Dados, um container para abrigar o texto-->
+  <View
+      android:id="@+id/pnlDados"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:background="@drawable/pnldados"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+
+  <!--Esse é o botão de notificações-->
+  <ImageButton
+      android:id="@+id/btnUp"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/up"
+      app:layout_constraintEnd_toEndOf="@+id/imageView"
+      app:layout_constraintStart_toStartOf="@+id/imageView"
+      app:layout_constraintTop_toTopOf="@+id/pnlDados" />
+
+  <!--Esse é o txt App e sua formatação-->
+  <TextView
+      android:id="@+id/txtApp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="40dp"
+      android:layout_marginTop="56dp"
+      android:layout_marginEnd="8dp"
+      android:background="@color/colorPrimary"
+      android:paddingEnd="8dp"
+      android:paddingStart="8dp"
+      android:elevation="10dp"
+      android:text="App Portais"
+      android:textColor="#fff"
+      android:textSize="30dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.68"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/pnlDados"
+      tools:ignore="MissingConstraints" />
+  <!--Esse é o txt com o meu nome-->
+  <TextView
+      android:id="@+id/txtCaleb"
+      android:layout_width="181dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:layout_marginEnd="80dp"
+      android:text="Caleb Marins"
+      android:textColor="#000"
+      android:textSize="30dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.224"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtApp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arraste para cima para mais detalhes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        android:layout_marginBottom="7dp"
+        />
+</android.support.constraint.ConstraintLayout>

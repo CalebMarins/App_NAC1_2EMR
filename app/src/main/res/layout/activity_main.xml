@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <!-- Mercado Livre -->
+    <Button
+        android:id="@+id/btnMercadoLivre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="#fff15a"
+        android:onClick="mercadoLivreWeb"
+        android:text="mercado livre"
+        android:textColor="#2d2e78"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="174dp" />
+
+    <!-- Buscapé -->
+    <Button
+        android:id="@+id/btnBuscape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="#000"
+        android:onClick="buscape"
+        android:text="Buscapé"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnMercadoLivre"
+        tools:layout_editor_absoluteX="174dp" />
+
+    <!-- Magalu -->
+    <Button
+        android:id="@+id/btnMagalu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="#0079e3"
+        android:onClick="magalu"
+        android:text="Magazineluiza"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscape"
+        tools:layout_editor_absoluteX="174dp" />
+
+    <!-- Americanas -->
+    <Button
+        android:id="@+id/btnAmericanas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="#e30000"
+        android:onClick="americanas"
+        android:text="Americanas"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnMagalu"
+        tools:layout_editor_absoluteX="174dp" />
+
+    <!-- Submarino -->
+    <Button
+        android:id="@+id/btnSubmarino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="#0000e0"
+        android:onClick="submarino"
+        android:text="Submarino"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnAmericanas"
+        tools:layout_editor_absoluteX="174dp" />
+
+    <!-- Netshoes -->
+    <Button
+        android:id="@+id/btnNetshoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="#480072"
+        android:onClick="netshoes"
+        android:text="Netshoes"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmarino"
+        tools:layout_editor_absoluteX="174dp" />
+
+
+
+    <!-- Botão Sobre -->
+    <Button
+        android:id="@+id/btnSobre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sobre"
+        android:text="SOBRE"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
