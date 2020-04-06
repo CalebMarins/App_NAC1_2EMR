@@ -21,6 +21,7 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.0" />
 
+  <!-- Btn para voltar para home -->
   <ImageButton
       android:id="@+id/btnVoltar"
       android:layout_width="30dp"
@@ -33,7 +34,7 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-  <!--Essa é a sombra atrás ddos dados -->
+  <!--Essa é a sombra atrás dados dados -->
   <ImageView
       android:id="@+id/shape_circle_shadow_dados"
       android:layout_width="287dp"
@@ -49,7 +50,7 @@
       android:id="@+id/shape_circle_shadow_me"
       android:layout_width="238dp"
       android:layout_height="238dp"
-      android:layout_marginTop="63dp"
+      android:layout_marginTop="47dp"
       android:background="@drawable/shadow"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -60,11 +61,11 @@
       android:id="@+id/shape_circle_branco"
       android:layout_width="230dp"
       android:layout_height="230dp"
-      android:layout_marginTop="69dp"
+      android:layout_marginTop="4dp"
       android:background="@drawable/shape_circle_branco"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="@id/shape_circle_shadow_me" />
 
 
   <!--Bolota geral com os meus dados-->
@@ -83,13 +84,11 @@
       android:id="@+id/img_me"
       android:layout_width="210dp"
       android:layout_height="210dp"
-      android:layout_marginTop="80dp"
+      android:layout_marginTop="11dp"
       android:background="@drawable/me_icon"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-
+      app:layout_constraintTop_toTopOf="@+id/shape_circle_branco" />
 
   <!--Esse é o txt App e sua formatação-->
   <TextView
@@ -141,36 +140,39 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/txtCaleb" />
 
-  <ImageView
-      android:id="@+id/i1"
+  <!-- Btn com redirect para webview com meu instagram -->
+  <ImageButton
+      android:id="@+id/insta"
       android:layout_width="45dp"
       android:layout_height="45dp"
       android:layout_marginStart="50dp"
+      android:onClick="insta"
       android:background="@drawable/instagram"
-      app:layout_constraintBottom_toBottomOf="@+id/i2"
-
+      app:layout_constraintBottom_toBottomOf="@+id/github"
       app:layout_constraintStart_toStartOf="@+id/imageView"
-      app:layout_constraintTop_toTopOf="@+id/i2" />
+      app:layout_constraintTop_toTopOf="@+id/github" />
 
-  <ImageView
-      android:id="@+id/i2"
-      android:layout_width="60dp"
-      android:layout_height="60dp"
-
-
-      android:layout_marginTop="28dp"
-      android:background="@drawable/instagram"
-      app:layout_constraintStart_toEndOf="@+id/i1"
-      app:layout_constraintEnd_toStartOf="@+id/i3"
+  <!-- Btn com redirect para o meu github -->
+  <ImageButton
+      android:id="@+id/github"
+      android:layout_width="90dp"
+      android:layout_height="90dp"
+      android:layout_marginTop="20dp"
+      android:onClick="github"
+      android:background="@drawable/github"
+      app:layout_constraintStart_toEndOf="@+id/insta"
+      app:layout_constraintEnd_toStartOf="@+id/linkedin"
       app:layout_constraintTop_toBottomOf="@+id/shape_circle_shadow_dados" />
 
-  <ImageView
-      android:id="@+id/i3"
+  <!-- Btn com redirect para webview do meu linkedin -->
+  <ImageButton
+      android:id="@+id/linkedin"
       android:layout_width="45dp"
       android:layout_height="45dp"
       android:layout_marginEnd="50dp"
-      android:background="@drawable/instagram"
-      app:layout_constraintBottom_toBottomOf="@+id/i2"
+      android:onClick="linkedin"
+      android:background="@drawable/linkedin"
+      app:layout_constraintBottom_toBottomOf="@+id/github"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="@+id/i2" />
+      app:layout_constraintTop_toTopOf="@+id/github" />
 </android.support.constraint.ConstraintLayout>

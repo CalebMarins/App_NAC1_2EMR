@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
-<!--
-Essa é a animação de baixo para cima utilizada no app
--->
-    <translate android:duration="1200"
-        android:fromYDelta="5%p"
-        android:fromXDelta="0%p"
-        />
+    <translate android:duration="2000"
+        android:fromYDelta="10%p"
+        android:fromXDelta="0%p"/>
 </set>
