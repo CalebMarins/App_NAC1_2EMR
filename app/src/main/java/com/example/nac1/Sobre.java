@@ -1,6 +1,5 @@
 package com.example.nac1;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,19 +12,15 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Sobre extends AppCompatActivity implements View.OnClickListener, GestureDetector.OnGestureListener {
+public class Sobre extends AppCompatActivity implements View.OnClickListener {
 
     //Declarando as variáveis
-    TextView caleb, app;
-    ImageView me_icon;
-    Animation frombottom, frombottom2, fromleft, fromright;
-    View pnlDados;
-    ImageButton up;
+    TextView caleb, app, rm;
+    ImageView me_icon, shape_circle_roxo, shape_circle_branco, shape_circle_shadow_me, shape_circle_shadow_dados;
+    Animation fromtop, frombottom, frombottom2, fromleft, fromright;
+    ImageButton pnlbgSeta, up;
 
-    //Variáveis de gesto
-    private float y1, y2;
-    private static int min = 150;
-    private GestureDetector gd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,91 +32,52 @@ public class Sobre extends AppCompatActivity implements View.OnClickListener, Ge
         //Instanciando variáveis
         caleb = (TextView) findViewById(R.id.txtCaleb);
         app = (TextView) findViewById(R.id.txtApp);
+        rm = (TextView) findViewById(R.id.txtRm);
         me_icon = (ImageView) findViewById(R.id.img_me);
-        pnlDados = (View) findViewById(R.id.pnlDados);
-        up = (ImageButton) findViewById(R.id.btnUp);
+        shape_circle_branco = (ImageView) findViewById(R.id.shape_circle_branco);
+        shape_circle_roxo = (ImageView) findViewById(R.id.shape_circle_roxo);
+        shape_circle_shadow_me = (ImageView) findViewById(R.id.shape_circle_shadow_me);
+        shape_circle_shadow_dados = (ImageView) findViewById(R.id.shape_circle_shadow_dados);
 
-        up.setOnClickListener(this);
-
-        //Inicializando o detector de gesto
-        this.gd = new GestureDetector(Sobre.this , this);
         //Instanciando as animações
         frombottom = AnimationUtils.loadAnimation(this, R.anim.frombottom);
         frombottom2 = AnimationUtils.loadAnimation(this, R.anim.frombottom2);
         fromleft = AnimationUtils.loadAnimation(this, R.anim.fromleft);
         fromright = AnimationUtils.loadAnimation(this, R.anim.fromright);
+        fromtop = AnimationUtils.loadAnimation(this, R.anim.fromtop);
 
         //Definindo as animações na tela
-        me_icon.setAnimation(frombottom);
-        pnlDados.setAnimation(frombottom2);
-        caleb.setAnimation(fromleft);
-        caleb.setAnimation(frombottom);
+        //de cima
+        shape_circle_shadow_me.setAnimation(fromtop);
+        shape_circle_branco.setAnimation(fromtop);
+
+        //De baixo 1
+        me_icon.setAnimation(fromtop);
+        shape_circle_roxo.setAnimation(frombottom);
+        shape_circle_shadow_dados.setAnimation(frombottom);
+
+
+        //De baixo 2
+        rm.setAnimation(frombottom);
+
         app.setAnimation(fromright);
+        caleb.setAnimation(fromleft);
 
     }
 
-    public void nextPage(){
-        Intent i = new Intent(Sobre.this, AboutMe.class);
+
+
+    public void gotoMain(){
+        Intent i = new Intent(Sobre.this, MainActivity.class);
         startActivity(i);
-        overridePendingTransition(R.anim.slide_entrada, R.anim.slide_saida);
+        overridePendingTransition(R.anim.slide_left, R.anim.slide_right);
     }
+
+
 
     //Método de clique no botão
     @Override
     public void onClick(View v) {
-        this.nextPage();
-    }
-
-    //Override de gesto
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        gd.onTouchEvent(event);
-        switch (event.getAction()){
-            //Inicio a detecção do gesto
-            case MotionEvent.ACTION_DOWN:
-                y1 = event.getY();
-                break;
-
-            //Finalizando a detecção do gesto
-            case MotionEvent.ACTION_UP:
-                y2 = event.getY();
-
-                float valorY = y1 - y2;
-
-                if (Math.abs (valorY)> min){
-                    this.nextPage();
-                }
-        }
-        return super.onTouchEvent(event);
-    }
-
-    @Override
-    public boolean onDown(MotionEvent e) {
-        return false;
-    }
-
-    @Override
-    public void onShowPress(MotionEvent e) {
-
-    }
-
-    @Override
-    public boolean onSingleTapUp(MotionEvent e) {
-        return false;
-    }
-
-    @Override
-    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-        return false;
-    }
-
-    @Override
-    public void onLongPress(MotionEvent e) {
-
-    }
-
-    @Override
-    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        return false;
+            this.gotoMain();
     }
 }

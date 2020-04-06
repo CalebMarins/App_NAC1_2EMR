@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/App_NAC1_2EMR" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Nac_Mobile_2EMR" vcs="Git" />
   </component>
 </project>

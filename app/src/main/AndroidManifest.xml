@@ -12,10 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutMe"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"></activity>
-        <activity android:name=".MercadoLivreWeb" />
+        <activity android:name=".WebView" />
         <activity
             android:name=".Sobre"
             android:screenOrientation="portrait"

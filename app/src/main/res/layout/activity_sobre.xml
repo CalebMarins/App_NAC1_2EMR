@@ -21,85 +21,156 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.0" />
 
+  <ImageButton
+      android:id="@+id/btnVoltar"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/back"
+      android:onClick="onClick"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.04"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+  <!--Essa é a sombra atrás ddos dados -->
+  <ImageView
+      android:id="@+id/shape_circle_shadow_dados"
+      android:layout_width="287dp"
+      android:layout_height="287dp"
+      android:layout_marginTop="147dp"
+      android:background="@drawable/shadow"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/img_me" />
+
+  <!--Essa é a sombra atrás da minha cara-->
+  <ImageView
+      android:id="@+id/shape_circle_shadow_me"
+      android:layout_width="238dp"
+      android:layout_height="238dp"
+      android:layout_marginTop="63dp"
+      android:background="@drawable/shadow"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <!--Essa é a bolota atrás da minha cara-->
+  <ImageView
+      android:id="@+id/shape_circle_branco"
+      android:layout_width="230dp"
+      android:layout_height="230dp"
+      android:layout_marginTop="69dp"
+      android:background="@drawable/shape_circle_branco"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <!--Bolota geral com os meus dados-->
+  <ImageView
+      android:id="@+id/shape_circle_roxo"
+      android:layout_width="280dp"
+      android:layout_height="280dp"
+      android:layout_marginTop="150dp"
+      android:background="@drawable/shape_circle_roxo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/img_me" />
+
   <!--Essa é a minha foto em ícone e sua formatação-->
   <ImageView
       android:id="@+id/img_me"
       android:layout_width="210dp"
       android:layout_height="210dp"
-      android:layout_marginTop="70dp"
+      android:layout_marginTop="80dp"
       android:background="@drawable/me_icon"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      tools:ignore="MissingConstraints" />
+      app:layout_constraintTop_toTopOf="parent" />
 
 
-  <!--Esse é o Pnl Dados, um container para abrigar o texto-->
-  <View
-      android:id="@+id/pnlDados"
-      android:layout_width="match_parent"
-      android:layout_height="200dp"
-      android:background="@drawable/pnldados"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      />
-
-  <!--Esse é o botão de notificações-->
-  <ImageButton
-      android:id="@+id/btnUp"
-      android:layout_width="40dp"
-      android:layout_height="40dp"
-      android:background="@drawable/up"
-      app:layout_constraintEnd_toEndOf="@+id/imageView"
-      app:layout_constraintStart_toStartOf="@+id/imageView"
-      app:layout_constraintTop_toTopOf="@+id/pnlDados" />
 
   <!--Esse é o txt App e sua formatação-->
   <TextView
       android:id="@+id/txtApp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="40dp"
-      android:layout_marginTop="56dp"
-      android:layout_marginEnd="8dp"
-      android:background="@color/colorPrimary"
-      android:paddingEnd="8dp"
       android:paddingStart="8dp"
-      android:elevation="10dp"
+      android:paddingEnd="8dp"
+      android:layout_marginTop="30dp"
       android:text="App Portais"
       android:textColor="#fff"
       android:textSize="30dp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.68"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="@+id/pnlDados"
-      tools:ignore="MissingConstraints" />
+      app:layout_constraintTop_toBottomOf="@id/img_me" />
+
   <!--Esse é o txt com o meu nome-->
   <TextView
       android:id="@+id/txtCaleb"
-      android:layout_width="181dp"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="12dp"
-      android:layout_marginEnd="80dp"
+      android:layout_marginTop="23dp"
+      android:background="@drawable/bg_nome"
+      android:paddingLeft="8dp"
+      android:paddingEnd="8dp"
       android:text="Caleb Marins"
-      android:textColor="#000"
+      android:textColor="@color/colorPrimary"
       android:textSize="30dp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.224"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/txtApp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Arraste para cima para mais detalhes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        android:layout_marginBottom="7dp"
-        />
+  <!--Esse é o txt rm e sua formatação-->
+  <TextView
+      android:id="@+id/txtRm"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="55dp"
+      android:background="@color/colorPrimary"
+      android:paddingStart="8dp"
+      android:paddingEnd="8dp"
+      android:text="RM83636"
+      android:textColor="#fff"
+      android:textSize="25dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtCaleb" />
+
+  <ImageView
+      android:id="@+id/i1"
+      android:layout_width="45dp"
+      android:layout_height="45dp"
+      android:layout_marginStart="50dp"
+      android:background="@drawable/instagram"
+      app:layout_constraintBottom_toBottomOf="@+id/i2"
+
+      app:layout_constraintStart_toStartOf="@+id/imageView"
+      app:layout_constraintTop_toTopOf="@+id/i2" />
+
+  <ImageView
+      android:id="@+id/i2"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+
+
+      android:layout_marginTop="28dp"
+      android:background="@drawable/instagram"
+      app:layout_constraintStart_toEndOf="@+id/i1"
+      app:layout_constraintEnd_toStartOf="@+id/i3"
+      app:layout_constraintTop_toBottomOf="@+id/shape_circle_shadow_dados" />
+
+  <ImageView
+      android:id="@+id/i3"
+      android:layout_width="45dp"
+      android:layout_height="45dp"
+      android:layout_marginEnd="50dp"
+      android:background="@drawable/instagram"
+      app:layout_constraintBottom_toBottomOf="@+id/i2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/i2" />
 </android.support.constraint.ConstraintLayout>
